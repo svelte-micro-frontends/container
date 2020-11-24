@@ -2,9 +2,10 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c && gh-pages -d public",
+    "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public -p 5000 -c"
+    "start": "sirv public -p 5000 -c",
+    "deploy": "npm run build && gh-pages -d public"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^16.0.0",

@@ -3,6 +3,7 @@
   import Home from "./routes/Home.svelte";
   import About from "./routes/About.svelte";
   import Restaurants from "./routes/Restaurants.svelte";
+  import Order from "./routes/Order.svelte";
 
   export let url = "";
 </script>
@@ -22,12 +23,14 @@
         </li>
         <li>
           <Link to="/about">About</Link>
+        </li>
       </ol>
     </nav>
   </header>
   <div>
     <Route path="restaurants" component="{Restaurants}" />
     <Route path="about" component="{About}" />
+    <Route path="order" component="{Order}" />
     <Route path="/"><Home /></Route>
   </div>
 </Router>

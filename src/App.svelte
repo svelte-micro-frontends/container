@@ -6,6 +6,10 @@
   import Order from "./routes/Order.svelte";
 
   export let url = "";
+  function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+  }
+
 </script>
 
 <Router url="{url}">
@@ -19,7 +23,7 @@
           <Link to="/restaurants">Browse restaurants</Link>
         </li>
         <li>
-          <Link to="/random">Surprise Me</Link>
+          <Link to="/order/{getRandomInt(8)}">Surprise Me</Link>
         </li>
         <li>
           <Link to="/about">About</Link>
